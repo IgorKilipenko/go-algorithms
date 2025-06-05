@@ -3,7 +3,7 @@ package search
 import "golang.org/x/exp/constraints"
 
 // BinarySearch выполняет бинарный поиск в отсортированном слайсе.
-func BinarySearch[Comp constraints.Ordered](sortedData []Comp, target Comp) int {
+func BinarySearch[T constraints.Ordered](sortedData []T, target T) int {
 	n := len(sortedData)
 
 	if n < 3 { // linear search
